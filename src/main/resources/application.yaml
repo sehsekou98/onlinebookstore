@@ -6,3 +6,6 @@ keep-alive-timeout: 15s
 threads:
 max: 50
 min-spare: 5
+
+polar:
+  greeting: Welcome to the Sekou's book catalog!
