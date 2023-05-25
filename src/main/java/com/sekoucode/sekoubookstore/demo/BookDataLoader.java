@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class BookDataLoader {
     private  final BookRepository bookRepository;
     public BookDataLoader(BookRepository bookRepository) {
+
         this.bookRepository = bookRepository;
     }
     @EventListener(ApplicationReadyEvent.class)
