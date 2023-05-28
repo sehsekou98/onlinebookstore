@@ -1,20 +1,23 @@
 package com.sekoucode.sekoubookstore.domain;
 
+import org.springframework.data.jdbc.repository.query.Modifying;
+import org.springframework.data.jdbc.repository.query.Query;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Optional;
 
-public interface BookRepository {
+public interface BookRepository  extends CrudRepository<Book, Long> {
 
-    // find all books
 
-    Iterable<Book> findAll();
-
-    //find book by id
     Optional<Book> findByIsbn(String isbn);
-
     boolean existsByIsbn(String isbn);
-    Book save(Book book);
 
-    //delete book
+
+
+    @Modifying
+    @Transactional
+    @Query("delete from book where isbn = :isbn")
     void deleteByIsbn(String isbn);
 
 }

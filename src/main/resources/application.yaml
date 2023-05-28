@@ -12,6 +12,16 @@ spring:
     name: sekoubookstore-service
   config:
     import: "optional:configserver:"
+  datasource:
+    username: user
+    password: password
+    url: jdbc:postgresql://localhost:5432/polardb_catalog
+  sql:
+     init:
+       mode: always
+       hikari:
+        connection-timeout: 2000
+        maximum-pool-size: 5
   cloud:
     config:
       uri: http://localhost:8888
@@ -23,16 +33,7 @@ spring:
         initial-interval: 1000 # 1s
         max-interval: 2000 # 2s
         multiplier: 1.1
-        datasource:
-          username: user
-          password: password
-          url: jdbc:postgresql://localhost:5432/polardb_catalog
-          sql:
-            init:
-              mode: always
-              hikari:
-              connection-timeout: 2000
-              maximum-pool-size: 5
+
 
 management:
   endpoints:
