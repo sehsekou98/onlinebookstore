@@ -1,4 +1,4 @@
-package com.sekoucode.sekoubookstore.web;
+package com.sekoucode.sekoubookstore.controller;
 
 
 import com.sekoucode.sekoubookstore.domain.BookNotFoundException;

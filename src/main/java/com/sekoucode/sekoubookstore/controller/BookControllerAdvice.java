@@ -1,4 +1,4 @@
-package com.sekoucode.sekoubookstore.web;
+package com.sekoucode.sekoubookstore.controller;
 
 import com.sekoucode.sekoubookstore.domain.BookAlreadyExistsException;
 import com.sekoucode.sekoubookstore.domain.BookNotFoundException;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.net.FileNameMap;
 import java.util.HashMap;
 import java.util.Map;
 

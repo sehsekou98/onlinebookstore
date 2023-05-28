@@ -1,4 +1,4 @@
-package com.sekoucode.sekoubookstore.persistence;
+package com.sekoucode.sekoubookstore.repository;
 
 import com.sekoucode.sekoubookstore.domain.Book;
 import com.sekoucode.sekoubookstore.domain.BookRepository;
